@@ -1,0 +1,23 @@
+{
+  "name": "@hubescola/telemetria-logador",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/logador.js",
+  "types": "dist/logador.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test test/logador.test.mjs"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api-logs": "^0.223.2"
+  },
+  "devDependencies": {
+    "@opentelemetry/api-logs": "0.223.2",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.3"
+  }
+}
